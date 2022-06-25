@@ -1,4 +1,5 @@
 const form = document.getElementById("create-event-form");
+const url = "https://xp41-soundgarden-api.herokuapp.com/events";
 
 function criarEvento(event) {
   event.preventDefault();
@@ -20,7 +21,7 @@ function criarEvento(event) {
     number_tickets: lotacao,
   };
 
-  fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
+  fetch(url, {
     method: "POST",
     body: JSON.stringify(evento),
     headers: { "Content-type": "application/json; charset=UTF-8" },
