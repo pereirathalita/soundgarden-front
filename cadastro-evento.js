@@ -28,5 +28,7 @@ function criarEvento(event) {
   })
     .then((response) => response.json())
     .then((json) => console.log(json))
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      if (err === '404') console.log("pagina não encontrada");
+    });
 }

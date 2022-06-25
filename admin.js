@@ -1,27 +1,12 @@
-const botoesEditar = document.querySelectorAll("td a");
-// botoesEditar.forEach((element) =>
-//   element.addEventListener("click", editarEvento)
-// );
-
-const url = "https://xp41-soundgarden-api.herokuapp.com/events";
-
-// function editarEvento(event) {
-//   event.preventDefault();
-//   console.log(event);
-// }
-
 function getEventos() {
+const url = "https://xp41-soundgarden-api.herokuapp.com/events";
   fetch(url)
     .then((response) => response.json())
-    .then((data) => listarEventos(data));
+    .then((data) => listarEventos(data))
+    .catch(err => console.log(err));
 }
 
 function listarEventos(eventos) {
-  console.log(
-    "🚀 ~ file: admin.js ~ line 20 ~ listarEventos ~ eventos",
-    eventos
-  );
-
   eventos.forEach((evento, index) => {
     const tr = document.createElement("tr");
     const attractionsStr = evento.attractions.toString();
@@ -31,7 +16,7 @@ function listarEventos(eventos) {
     <td>${attractionsStr}</td>
     <td>
         <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-        <a href="editar-evento.html" class="btn btn-secondary">editar</a>
+        <a href="editar-evento.html?id=${evento._id}" _id="${evento._id}" id="editar-evento" class="btn btn-secondary">editar</a>
         <a href="editar-evento.html" class="btn btn-danger">excluir</a>
     </td>`;
     document.querySelector("table tbody").appendChild(tr);
