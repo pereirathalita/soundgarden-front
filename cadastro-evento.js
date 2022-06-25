@@ -1,7 +1,9 @@
 const form = document.getElementById("create-event-form");
+form.addEventListener('submit', criarEvento);
+
 const url = "https://xp41-soundgarden-api.herokuapp.com/events";
 
-function criarEvento(event) {
+function criarEvento() {
   event.preventDefault();
 
   const nome = document.getElementById("nome").value;
