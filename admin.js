@@ -17,7 +17,7 @@ function listarEventos(eventos) {
     <td>
         <a href="reservas.html" class="btn btn-dark">ver reservas</a>
         <a href="editar-evento.html?id=${evento._id}" _id="${evento._id}" id="editar-evento" class="btn btn-secondary">editar</a>
-        <a href="editar-evento.html" class="btn btn-danger">excluir</a>
+        <a href="excluir-evento.html?id=${evento._id}" _id="${evento._id}" class="btn btn-danger">excluir</a>
     </td>`;
     document.querySelector("table tbody").appendChild(tr);
   });

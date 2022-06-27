@@ -30,7 +30,9 @@ function criarEvento() {
   })
     .then((response) => response.json())
     .then((json) => console.log(json))
+    .then(alert("Evento criado com sucesso!"))
+    .then(location.href = "admin.html")
     .catch((err) => {
-      if (err === '404') console.log("pagina não encontrada");
+      if (err === '404') {console.log("pagina não encontrada")};
     });
 }
