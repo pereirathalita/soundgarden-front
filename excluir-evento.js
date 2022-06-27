@@ -1,5 +1,5 @@
 const form = document.getElementById('delete-event-form');
-form.addEventListener('submit', alterarEvento);
+form.addEventListener('submit', deletarEvento);
 
 function getEvento() {
   const queryString = window.location.search;
@@ -21,14 +21,8 @@ function completarCampos (json) {
   document.getElementById('lotacao').value = json.number_tickets;
 }
 
-function alterarEvento () {
+function deletarEvento () {
   event.preventDefault();
-  console.log('olá')
-
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const id = urlParams.get("id");
-  const url = "https://xp41-soundgarden-api.herokuapp.com/events/" + id;
 
   fetch(url, {
     method: "DELETE",
@@ -43,6 +37,5 @@ function alterarEvento () {
     });
 
 }
-
 
 getEvento();
