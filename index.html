@@ -16,11 +16,29 @@
         <img src="img/Sound-logo (1).png" width="300" alt="">
     </header>
     <main>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-            <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
-            </div>
+        <!-- <section class="full d-flex justify-content-center align-items-center"
+            style="background-color: #F8BBD0; color: #fff"> -->
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/music.svg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/musical-note.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Sound-logo.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
         <section class="full d-flex justify-content-center align-items-center">
             <div class="container text-center">
@@ -29,7 +47,7 @@
                         <h2>Próximos eventos</h2>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <article class="evento card p-3 my-3">
+                        <article class="evento card p-5 my-3">
                             <h2 class="text-center">nome do evento - 05/03/2022</h2>
                             <h4 class="text-center">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
@@ -41,7 +59,7 @@
                         </article>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <article class="evento card p-3 my-3">
+                        <article class="evento card p-5 my-3">
                             <h2 class="text-center">nome do evento - 05/03/2022</h2>
                             <h4 class="text-center">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
@@ -53,7 +71,7 @@
                         </article>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <article class="evento card p-3 my-3">
+                        <article class="evento card p-5 my-3">
                             <h2 class="text-center">nome do evento - 05/03/2022</h2>
                             <h4 class="text-center">Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
@@ -75,7 +93,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-12 d-block d-lg-none text-center mb-5">
-                        <img src="./img/musical-note.png" width="30%">
+                        <img src="img/music.svg" width="30%">
                     </div>
                     <div class="col">
                         <h2>A Sound Garden</h2>
@@ -113,7 +131,7 @@
                 </div>
                 <div class="col-12 col-lg-6 order-1 order-lg-2">
                     <nav>
-                        <ul class="row justify-content-center my-lg-4">
+                        <ul class="row justify-content-center align-items-center my-lg-4">
                             <li class="col-auto">
                                 <a href="eventos.html">eventos</a>
                             </li>
