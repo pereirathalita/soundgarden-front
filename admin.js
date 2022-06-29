@@ -15,7 +15,7 @@ function listarEventos(eventos) {
     <td>${evento.name}</td>
     <td>${attractionsStr}</td>
     <td>
-        <a href="reservas.html" class="btn btn-dark">ver reservas</a>
+        <a href="reservas.html?id=${evento._id}" class="btn btn-dark">ver reservas</a>
         <a href="editar-evento.html?id=${evento._id}" _id="${evento._id}" id="editar-evento" class="btn btn-secondary">editar</a>
         <a href="excluir-evento.html?id=${evento._id}" _id="${evento._id}" class="btn btn-danger">excluir</a>
     </td>`;
