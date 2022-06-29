@@ -12,18 +12,19 @@ function getReservas() {
 }
 
 function listarReservas(reservas) {
-//   const titulo = reservas[0].event.name;
-//   document.getElementById("titulo-evento").innerHTML = titulo;
+  const titulo = reservas[0].event.name;
+  document.getElementById("titulo-evento").innerHTML = `Reservas referentes ao evento ${titulo.bold()}`;
   reservas.forEach((reserva, index) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `<th scope="row">${index + 1}</th>
         <td>${reserva.owner_name}</td>
         <td>${reserva.owner_email}</td>
-        <td>${reserva.number_tickets}</td>
-        <td>
-        </td>`;
+        <td>${reserva.number_tickets}</td>`;
+
     document.querySelector("table tbody").appendChild(tr);
   });
 }
+
+// chamando a function
 
 getReservas();
