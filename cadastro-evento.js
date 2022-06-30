@@ -9,9 +9,11 @@ function criarEvento() {
   const nome = document.getElementById("nome").value;
   const atracoes = document.getElementById("atracoes").value.split(",");
   const descricao = document.getElementById("descricao").value;
+  
   const data = document.getElementById("data").value;
   const dateObject = new Date(data);
   const isoDate = dateObject.toISOString();
+  
   const lotacao = document.getElementById("lotacao").value;
   const poster = document.getElementById("poster").value;
 

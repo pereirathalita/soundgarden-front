@@ -84,4 +84,16 @@ footer nav ul li  {
     cursor: pointer;
   }
 
-  
+  /* #menu-mobile-admin{
+    display: none !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #menu-mobile-admin{
+        display: block !important;
+      }
+
+    #menu-admin{
+        display: none !important;
+    }
+  } */
