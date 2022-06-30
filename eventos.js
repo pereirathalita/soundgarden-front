@@ -11,7 +11,7 @@ function getEventos() {
 function listarEventos(eventos) {
   eventos.forEach((evento) => {
     let article = document.createElement("article");
-    article.classList.add("evento", 'card', "p-5", "m-3", 'col-sm-12', 'col-md-6', 'col-lg-3');
+    article.classList.add("evento", 'card', "p-5", "m-3", 'col-sm-12', 'col-md-6', 'col-lg-3', 'justify-content-between');
     const data = new Date(evento.scheduled).toLocaleString().slice(0,-3);
     const attractionsStr = evento.attractions.toString();
     article.innerHTML = `<h2>${evento.name} - ${data}</h2>
