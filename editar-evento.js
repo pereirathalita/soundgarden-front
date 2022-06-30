@@ -17,7 +17,7 @@ function completarCampos(json) {
   document.getElementById("banner").value = json.poster;
   document.getElementById("atracoes").value = json.attractions.toString();
   document.getElementById("descricao").value = json.description;
-  document.getElementById("data").value = json.scheduled;
+  document.getElementById("data").value = json.scheduled.slice(0, -8);
   document.getElementById("lotacao").value = json.number_tickets;
 }
 

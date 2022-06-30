@@ -13,10 +13,11 @@ function criarEvento() {
   const dateObject = new Date(data);
   const isoDate = dateObject.toISOString();
   const lotacao = document.getElementById("lotacao").value;
+  const poster = document.getElementById("poster").value;
 
   const evento = {
     name: nome,
-    poster: "link",
+    poster: poster,
     attractions: atracoes,
     description: descricao,
     scheduled: isoDate,

@@ -10,8 +10,9 @@ function listarEventos(eventos) {
   eventos.forEach((evento, index) => {
     const tr = document.createElement("tr");
     const attractionsStr = evento.attractions.toString();
+    const data = new Date(evento.scheduled).toLocaleString().slice(0,-3);
     tr.innerHTML = `<th scope="row">${index+4}</th>
-    <td>${evento.scheduled}</td>
+    <td>${data}</td>
     <td>${evento.name}</td>
     <td>${attractionsStr}</td>
     <td>
