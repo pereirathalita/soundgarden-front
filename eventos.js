@@ -14,7 +14,8 @@ function listarEventos(eventos) {
     article.classList.add("evento", 'card', "p-5", "m-3", 'col-sm-12', 'col-md-6', 'col-lg-3', 'justify-content-between');
     const data = new Date(evento.scheduled).toLocaleString().slice(0,-3);
     const attractionsStr = evento.attractions.toString();
-    article.innerHTML = `<h2>${evento.name} - ${data}</h2>
+    article.innerHTML = 
+     `<h2>${evento.name} - ${data}</h2>
       <h4>${attractionsStr}</h4>
       <p>${evento.description}</p>
       <button id=${evento._id} onclick='abrirModal()' class="btn btn-primary">Reservar ingresso no ${evento.name.bold()}!</button>`;
@@ -71,7 +72,7 @@ async function reservarIngresso() {
     return result;
   } catch (err) {
     if (err.message === "400") alert("insira um email válido");
-    console.log(typeof err);
+    console.log(err);
   }
 }
 
@@ -85,7 +86,5 @@ span.onclick = function () {
 // fecha o modal qdo alguem clica fora
 
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  if (event.target == modal) modal.style.display = "none";
 };
