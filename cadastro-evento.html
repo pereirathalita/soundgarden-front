@@ -62,25 +62,25 @@
                     <form class="col-6" id="create-event-form">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" aria-describedby="nome">
+                            <input type="text" class="form-control" id="nome" aria-describedby="nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="atracoes" class="form-label">Atrações</label>
-                            <input type="text" class="form-control" id="atracoes" aria-describedby="atracoes">
+                            <input type="text" class="form-control" id="atracoes" aria-describedby="atracoes" required>
                             <small>insira o nome dos artistas separados por vírgula</small>
                         </div>
                         <div class="mb-3">
                             <label for="descricao" class="form-label">Descrição</label>
-                            <textarea name="descricao" id="descricao" class="form-control" rows="5"></textarea>
+                            <textarea name="descricao" id="descricao" class="form-control" rows="5" required></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="data" class="form-label">Data</label>
                             <input type="datetime-local" name="data" id="data" class="form-control"
-                                placeholder="00/00/00 00:00">
+                                placeholder="00/00/00 00:00" required>
                         </div>
                         <div class="mb-3">
                             <label for="lotacao" class="form-label">Lotação (número de ingressos disponiveis)</label>
-                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
+                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao" required>
                         </div>
                         <div class="mb-3">
                             <label for="poster" class="form-label">Insira o link de um poster para este evento</label>
